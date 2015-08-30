@@ -1,0 +1,157 @@
+// ## Imports
+
+@import normalize
+@import mixins/_mixins.utility
+@import mixins/_mixins.flex
+@import mixins/_mixins.buttons
+@import mixins/_mixins.responsive
+@import variables/_colors
+@import variables/_type
+
+// ## Globals		:	*, html, body
+
+*
+	box-sizing: border-box
+	+fastTransition
+
+
+html,
+body
+	height: 100%
+
+html
+	font-size: $fontSize
+
+body
+	+flex
+	+flexCol
+	flex: 1
+	min-height: 100%
+
+	font-family: $copyFont
+	-webkit-font-smoothing: antialiased
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
+
+	color: #333
+
+// ## Repeatables	:	a, p, h1-h6
+
+a
+	color: inherit
+	text-decoration: none
+
+p
+	font-weight: 400
+	line-height: 1.5
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-weight: 700
+	line-height: 1.5
+	margin: 0
+	padding: 0
+
+.heading
+	text-transform: uppercase
+
+/// SECTIONS - Global
+main
+	+flex
+	+flexCol
+	flex: 1
+	width: 100%
+	min-height: 100%
+	height: 100%
+
+section
+	+flex
+	+flexCol
+	flex-shrink: 0
+	min-height: 100%
+	padding: 1rem
+
+
+/// HEADER
+header
+	+flex
+	+flexCol
+	//flex-shrink: 0
+	color: white
+	background-image: url('../img/bg-1.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: $dkBlue
+	background-blend-mode: soft-light
+	
+
+	.headerTop		
+		+flex
+		+flexRow
+		justify-content: space-between
+		align-items: center
+		padding: 1rem .5rem 0
+		margin: 0
+
+		.brand h1
+			font-size: 1.5rem
+			font-weight: 900
+			text-transform: uppercase
+			letter-spacing: 0.025rem
+
+	.headerBottom
+		+flex
+		+flexCol
+		position: relative
+
+/// NAVIGATION
+nav
+	+flex
+	+flexCenter
+
+	position: relative
+
+	.navigation
+		+flex
+		+flexCol
+		+flexCenter
+		position: relative
+		top: 0
+		left: 0
+		right: 0
+
+
+		padding: 0
+		li
+			+flex
+			a
+				font-size: 1.25rem
+				font-weight: 300
+				padding: .5rem
+				text-transform: uppercase
+				letter-spacing: 0.05rem
+
+
+
+/// FOOTER
+
+// Blog / index
+@import pages/blog
+
+// Us
+@import pages/us
+
+// Music
+@import pages/music
+
+// Shows
+@import pages/shows
+
+// Media
+@import pages/media
+
+// Contact
+@import pages/contact
