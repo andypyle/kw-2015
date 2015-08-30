@@ -18,9 +18,15 @@ $(document).ready(function(){
 		toggleNav.on('click', function(e){
 			e.preventDefault();
 			
-			if(navPanel.is(':hidden')){				
+			if(navPanel.is(':hidden')){	
+				navPanel.velocity({
+					opacity: 1
+				},{queue:false, duration:450});			
 				navPanel.velocity('slideDown',{display:'flex', duration:450});
-			} else {				
+			} else {	
+				navPanel.velocity({
+					opacity: 0
+				},{queue:false, duration:450});			
 				navPanel.velocity('slideUp',{duration:450, queue: false});				
 			}
 			
