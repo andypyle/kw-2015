@@ -13855,7 +13855,6 @@ require('../components/velocity/velocity.ui.js');
 $(document).ready(function(){
 	var toggleNav = $('header').find('.toggleNav a');
 	var navPanel = $('header').find('nav .navigation');
-	var navHeight = $('header').outerHeight();
 	
 	/// If toggleNav is visible(only on small devices), bind a click event to it.
 
@@ -13865,9 +13864,9 @@ $(document).ready(function(){
 			e.preventDefault();
 			
 			if(navPanel.is(':hidden')){				
-				navPanel.velocity('slideDown',{display:'flex', duration:275});
+				navPanel.velocity('slideDown',{display:'flex', duration:450});
 			} else {				
-				navPanel.velocity('slideUp',{duration:275, queue: false});				
+				navPanel.velocity('slideUp',{duration:450, queue: false});				
 			}
 			
 		});

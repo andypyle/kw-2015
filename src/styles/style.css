@@ -547,7 +547,7 @@ header .headerTop {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0.5rem 0;
+  padding: 0.75rem 0.6rem;
   margin: 0;
 }
 
