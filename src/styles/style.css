@@ -516,6 +516,9 @@ header {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   color: white;
   background-image: url("../img/bg-1.jpg");
   background-repeat: no-repeat;
