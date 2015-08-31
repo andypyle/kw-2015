@@ -1,0 +1,32 @@
+/// SHOWS PAGE
+#shows
+	color: $dkBlue
+	.showsHeader
+		margin-bottom: 1rem
+	.showsList
+		+flex
+		+flexCol
+		flex-shrink: 0
+
+		.show
+			+flex
+			+flexRow
+			align-items: center
+			font-size: 1.05rem
+			padding: .75rem 0
+			border-bottom: 1px dotted transparentize($dkBlue, .5)
+
+			.showDate
+				width: 15%
+				flex: 1
+				font-weight: 600
+
+			.showVenue
+				flex: 1
+
+			.showDetails
+				text-align: center
+				width: 10%
+
+			&:last-of-type
+				border: 0

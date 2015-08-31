@@ -1073,6 +1073,95 @@ h6 {
   border: 1px solid white;
 }
 
+input,
+textarea,
+select {
+  width: 100%;
+  padding: .5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+  outline: none;
+  border-radius: .15rem;
+  border: 1px solid rgba(55, 54, 64, 0.5);
+  box-shadow: 0;
+  -webkit-transition: all 180ms ease-in-out;
+     -moz-transition: all 180ms ease-in-out;
+          transition: all 180ms ease-in-out;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+select:focus ~ label {
+  color: #373640;
+  font-weight: 700;
+  -webkit-transform: scale(1.025) translateY(-2px);
+     -moz-transform: scale(1.025) translateY(-2px);
+      -ms-transform: scale(1.025) translateY(-2px);
+          transform: scale(1.025) translateY(-2px);
+  -webkit-transition: all 180ms ease-in-out;
+     -moz-transition: all 180ms ease-in-out;
+          transition: all 180ms ease-in-out;
+}
+
+button {
+  width: 33.33333%;
+  padding: .5rem;
+  background: transparent;
+  color: #373640;
+  font-size: 1.35rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  box-shadow: none;
+  border: 2px solid #373640;
+  outline: 0;
+  border-radius: .25rem;
+}
+
+.formGroup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-bottom: .75rem;
+}
+
+.formGroup label {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+     -moz-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  font-size: .9rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.formBtn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .rotate180 {
   -webkit-transform: rotateZ(180deg);
      -moz-transform: rotateZ(180deg);
@@ -1471,4 +1560,177 @@ footer .siteInfo span.copyright {
 #us p {
   line-height: 1.75;
   font-size: 1.05rem;
+}
+
+#music .discography {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dotted #373640;
+}
+
+#music .discography .discographyHeader a.bandcamp {
+  font-weight: 700;
+}
+
+#music .discography .discographyAlbums {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#music .discography .discographyAlbums .album {
+  width: 50%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  position: relative;
+}
+
+#music .discography .discographyAlbums .album img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#music .discography .discographyAlbums .album span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(55, 54, 64, 0.6);
+  color: #EFEFEF;
+  font-size: .7rem;
+  letter-spacing: 0.065rem;
+  text-transform: uppercase;
+  padding: 1rem 0.5rem;
+  -webkit-transition: all 180ms ease-in-out;
+     -moz-transition: all 180ms ease-in-out;
+          transition: all 180ms ease-in-out;
+}
+
+#music .discography .discographyAlbums .album:hover span {
+  background-color: rgba(55, 54, 64, 0);
+  color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 180ms ease-in-out;
+     -moz-transition: all 180ms ease-in-out;
+          transition: all 180ms ease-in-out;
+}
+
+#shows {
+  color: #373640;
+}
+
+#shows .showsHeader {
+  margin-bottom: 1rem;
+}
+
+#shows .showsList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+#shows .showsList .show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.05rem;
+  padding: .75rem 0;
+  border-bottom: 1px dotted rgba(55, 54, 64, 0.5);
+}
+
+#shows .showsList .show .showDate {
+  width: 15%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 600;
+}
+
+#shows .showsList .show .showVenue {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#shows .showsList .show .showDetails {
+  text-align: center;
+  width: 10%;
+}
+
+#shows .showsList .show:last-of-type {
+  border: 0;
+}
+
+#contact .contactHeader {
+  margin-bottom: 1rem;
 }

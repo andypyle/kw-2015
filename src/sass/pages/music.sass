@@ -1,0 +1,54 @@
+/// MUSIC PAGE STYLES
+#music
+	.discography
+		+flex
+		+flexCol
+		flex-shrink: 0
+
+		margin-bottom: 1.5rem
+		padding-bottom: 1.5rem
+		border-bottom: 1px dotted $dkBlue
+		.discographyHeader
+			a.bandcamp
+				font-weight: 700
+
+		.discographyAlbums
+			+flex
+			flex-flow: row wrap
+
+			.album
+				width: 50%
+				height: auto
+				margin: 0
+				padding: 0
+				line-height: 0
+				position: relative
+
+				img
+					width: 100%
+					height: auto
+					margin: 0
+					padding: 0
+
+				span
+					+flex
+					width: 100%
+					height: 100%
+					justify-content: center
+					align-items: flex-end
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					background-color: transparentize($dkBlue, .4)
+					color: #EFEFEF					
+					font-size: .7rem
+					letter-spacing: 0.065rem
+					text-transform: uppercase					
+					padding: 1rem .5rem
+					+fastTransition
+
+				&:hover span
+					background-color: transparentize($dkBlue, 1)
+					color: rgba(255,255,255,.25)
+					+fastTransition

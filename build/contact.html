@@ -33,14 +33,42 @@
 							<li><a href="us.html">us</a></li>
 							<li><a href="music.html">music</a></li>
 							<li><a href="shows.html">shows</a></li>
-							<li><a href="media.html">media</a></li>
 							<li><a href="contact.html">contact</a></li>
 						</ul>
 					</nav>
 				</div>
 			</header>
 			<section id="contact">
-				<h2>contact</h2>
+				<div class="contactHeader">
+					<h2>Drop us a line</h2>
+				</div>
+				<div class="contactForm">
+					<form id="contactUs">
+						<div class="formGroup">
+							<input type="text" id="name" name="name" placeholder="First &amp; last">
+							<label for="name">Name</label>
+						</div>
+						<div class="formGroup">
+							<input type="email" id="email" name="email" placeholder="your@email.com">
+							<label for="email">Email</label>
+						</div>
+						<div class="formGroup">
+							<select id="subject" name="subject">
+								<option value="BOOKING">Booking</option>
+								<option value="PRESS">Press</option>
+								<option value="OTHER">Other</option>
+							</select>
+							<label for="subject">Subject</label>
+						</div>
+						<div class="formGroup">
+							<textarea id="message" name="message"></textarea>
+							<label for="message">Message</label>
+						</div>
+						<div class="formBtn">
+							<button type="submit">Send</button>
+						</div>
+					</form>
+				</div>
 			</section>
 			<!-- Site footer-->
 			<footer>

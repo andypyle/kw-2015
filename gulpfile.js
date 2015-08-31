@@ -50,7 +50,9 @@ var sources = {
 // Start browser-sync.
 gulp.task('browsersync', function(){
   browserSync.init({
-      server: './src'
+      server: './src',
+      notify: false,
+      open: false
     });
 
   gulp.watch('./src/sass/**/*.sass', ['sass']);

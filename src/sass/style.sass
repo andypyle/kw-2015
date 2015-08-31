@@ -79,6 +79,57 @@ h6
 		background: transparent
 		border: 1px solid white
 
+/// FORMS
+input,
+textarea,
+select
+	width: 100%
+	padding: .5rem
+	font-size: 1.25rem
+	letter-spacing: 0.05rem
+	font-weight: 300
+	outline: none
+	border-radius: .15rem
+	border: 1px solid transparentize($dkBlue, .5)
+	box-shadow: 0
+	+fastTransition
+
+	&:focus ~ label
+		color: $dkBlue
+		font-weight: 700
+		transform: scale(1.025) translateY(-2px)
+		+fastTransition
+
+button
+	width: (100% / 3)
+	padding: .5rem
+	background: transparent
+	color: $dkBlue
+	font-size: 1.35rem
+	font-weight: 400
+	text-transform: uppercase
+	letter-spacing: 0.075rem
+	box-shadow: none
+	border: 2px solid $dkBlue
+	outline: 0
+	border-radius: .25rem
+
+.formGroup
+	+flex
+	+flexCol
+	flex-shrink: 0
+	margin-bottom: .75rem
+
+	label
+		order: -1
+		font-size: .9rem
+		color: rgba(0,0,0,0.4)
+
+.formBtn
+	+flex
+	width: 100%
+	justify-content: flex-end
+
 /// TOGGLES
 .rotate180
 	transform: rotateZ(180deg)
