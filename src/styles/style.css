@@ -1459,6 +1459,10 @@ footer .siteInfo span.copyright {
   border-bottom: 0;
 }
 
+#us {
+  color: #373640;
+}
+
 #us img {
   width: 100%;
   height: auto;
