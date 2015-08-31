@@ -1458,3 +1458,13 @@ footer .siteInfo span.copyright {
 #blog article:last-of-type {
   border-bottom: 0;
 }
+
+#us img {
+  width: 100%;
+  height: auto;
+}
+
+#us p {
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
