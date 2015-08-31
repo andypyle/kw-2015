@@ -1,6 +1,7 @@
 // ## Imports
 
 @import normalize
+@import vendor/icons
 @import mixins/_mixins.utility
 @import mixins/_mixins.flex
 @import mixins/_mixins.buttons
@@ -58,6 +59,32 @@ h6
 .heading
 	text-transform: uppercase
 
+// BUTTONS
+.btn
+	+flex
+	+flexCenter
+	flex-shrink: 0
+	text-transform: uppercase
+	font-weight: 300
+	letter-spacing: 0.025rem
+	padding: .25rem .45rem
+	border-radius: .2rem
+	font-size: .75rem
+
+	.collecticon
+		font-size: 1.25rem
+		transition: all 450ms ease-in-out
+
+	&.btnGhost
+		background: transparent
+		border: 1px solid white
+
+/// TOGGLES
+.rotate180
+	transform: rotateZ(180deg)
+	transition: all 450ms ease-in-out
+	color: darken(white, 8%)
+
 /// SECTIONS - Global
 main
 	+flex
@@ -81,9 +108,11 @@ header
 	+flexCol
 	flex-shrink: 0
 	color: white
+	width: 100%
 	background-image: url('../img/bg-1.jpg')
 	background-repeat: no-repeat
 	background-size: cover
+	background-position: center
 	background-color: $dkBlue
 	background-blend-mode: soft-light
 	
@@ -137,6 +166,33 @@ nav
 
 
 /// FOOTER
+footer
+	+flex
+	+flexCol
+	+flexCenter
+	color: white
+	background: $green
+
+	.social
+		+flex
+		+flexRow
+		padding: 1rem 0 .5rem
+
+		a
+			font-size: 1.5rem
+			padding: 0 1rem
+
+	.siteInfo
+		+flex
+		+flexCol
+		+flexCenter
+		padding: .5rem 0 1rem
+		span
+			font-size: .9rem
+			color: #EFEFEF
+
+			&.copyright
+				padding-bottom: .5rem
 
 // Blog / index
 @import pages/blog

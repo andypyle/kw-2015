@@ -13868,11 +13868,13 @@ $(document).ready(function(){
 					opacity: 1
 				},{queue:false, duration:450});			
 				navPanel.velocity('slideDown',{display:'flex', duration:450});
+				$(this).find('span').addClass('rotate180');
 			} else {	
 				navPanel.velocity({
 					opacity: 0
 				},{queue:false, duration:450});			
 				navPanel.velocity('slideUp',{duration:450, queue: false});				
+				$(this).find('span').removeClass('rotate180');
 			}
 			
 		});
