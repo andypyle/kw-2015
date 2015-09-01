@@ -44,15 +44,17 @@
 				</div>
 				<div class="contactForm">
 					<form id="contactUs">
-						<div class="formGroup">
-							<input type="text" id="name" name="name" placeholder="First &amp; last">
-							<label for="name">Name</label>
+						<div class="formRow">
+							<div class="formGroup formName">
+								<input type="text" id="name" name="name" placeholder="First &amp; last">
+								<label for="name">Name</label>
+							</div>
+							<div class="formGroup formEmail">
+								<input type="email" id="email" name="email" placeholder="your@email.com">
+								<label for="email">Email</label>
+							</div>
 						</div>
-						<div class="formGroup">
-							<input type="email" id="email" name="email" placeholder="your@email.com">
-							<label for="email">Email</label>
-						</div>
-						<div class="formGroup">
+						<div class="formGroup formSubject">
 							<select id="subject" name="subject">
 								<option value="BOOKING">Booking</option>
 								<option value="PRESS">Press</option>
@@ -60,7 +62,7 @@
 							</select>
 							<label for="subject">Subject</label>
 						</div>
-						<div class="formGroup">
+						<div class="formGroup formMessage">
 							<textarea id="message" name="message"></textarea>
 							<label for="message">Message</label>
 						</div>
