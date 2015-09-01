@@ -23,6 +23,9 @@ body
 html
 	font-size: $fontSize
 
+	+medium
+		font-size: $fontSize * 1.25
+
 body
 	+flex
 	+flexCol
@@ -152,6 +155,16 @@ section
 	min-height: 100%
 	padding: 1rem
 
+	+small
+		width: 90%
+		margin: 0 auto
+
+	+medium
+		width: 80%
+
+	+large
+		width: 65%
+
 
 /// HEADER
 header
@@ -182,6 +195,19 @@ header
 			text-transform: uppercase
 			letter-spacing: 0.025rem
 
+		+medium
+			+flexCol
+			padding: 0 .6rem
+
+			.brand h1
+				font-size: 2.75rem
+			.toggleNav a
+				display: none
+
+		+large
+			.brand h1
+				font-size: 3.5rem
+
 	.headerBottom
 		+flex
 		+flexCol
@@ -198,10 +224,6 @@ nav
 		+flex
 		+flexCol
 		+flexCenter
-		position: relative
-		top: 0
-		left: 0
-		right: 0
 
 
 		padding: 0
@@ -214,6 +236,24 @@ nav
 				text-transform: uppercase
 				letter-spacing: 0.05rem
 
+		+small
+			+flexRow
+			li
+				a
+					padding: .5rem 1rem
+
+		+medium
+			margin: 0
+			li
+				a
+					padding: .75rem 1rem
+
+		+large
+			li a
+				+fastTransition
+				&:hover
+					background-color: transparentize($tan, .85)
+					+fastTransition
 
 
 /// FOOTER
@@ -245,6 +285,27 @@ footer
 
 			&.copyright
 				padding-bottom: .5rem
+
+	+large
+		+flexRow
+		justify-content: space-between
+		align-items: center
+		padding: 0 4rem
+
+		.social
+			order: 2
+			a:hover
+				transform: translateY(-4px)
+				+fastTransition
+
+		.siteInfo
+			padding: 1rem
+			span
+				font-size: .75rem
+				font-weight: 300
+
+				&.credits a
+					font-weight: 600
 
 // Blog / index
 @import pages/blog

@@ -983,6 +983,12 @@ html {
   font-size: 18px;
 }
 
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 22.5px;
+  }
+}
+
 body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1215,6 +1221,25 @@ section {
   padding: 1rem;
 }
 
+@media only screen and (min-width: 34em) {
+  section {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  section {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  section {
+    width: 65%;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1275,6 +1300,31 @@ header .headerTop .brand h1 {
   letter-spacing: 0.025rem;
 }
 
+@media only screen and (min-width: 48em) {
+  header .headerTop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 0.6rem;
+  }
+  header .headerTop .brand h1 {
+    font-size: 2.75rem;
+  }
+  header .headerTop .toggleNav a {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  header .headerTop .brand h1 {
+    font-size: 3.5rem;
+  }
+}
+
 header .headerBottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1333,10 +1383,6 @@ nav .navigation {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 0;
 }
 
@@ -1354,6 +1400,44 @@ nav .navigation li a {
   padding: .5rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+}
+
+@media only screen and (min-width: 34em) {
+  nav .navigation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav .navigation li a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  nav .navigation {
+    margin: 0;
+  }
+  nav .navigation li a {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  nav .navigation li a {
+    -webkit-transition: all 180ms ease-in-out;
+       -moz-transition: all 180ms ease-in-out;
+            transition: all 180ms ease-in-out;
+  }
+  nav .navigation li a:hover {
+    background-color: rgba(255, 215, 190, 0.15);
+    -webkit-transition: all 180ms ease-in-out;
+       -moz-transition: all 180ms ease-in-out;
+            transition: all 180ms ease-in-out;
+  }
 }
 
 footer {
@@ -1440,6 +1524,55 @@ footer .siteInfo span {
 
 footer .siteInfo span.copyright {
   padding-bottom: .5rem;
+}
+
+@media only screen and (min-width: 62em) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 4rem;
+  }
+  footer .social {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+       -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer .social a:hover {
+    -webkit-transform: translateY(-4px);
+       -moz-transform: translateY(-4px);
+        -ms-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-transition: all 180ms ease-in-out;
+       -moz-transition: all 180ms ease-in-out;
+            transition: all 180ms ease-in-out;
+  }
+  footer .siteInfo {
+    padding: 1rem;
+  }
+  footer .siteInfo span {
+    font-size: .75rem;
+    font-weight: 300;
+  }
+  footer .siteInfo span.credits a {
+    font-weight: 600;
+  }
 }
 
 #blog {
@@ -1548,6 +1681,43 @@ footer .siteInfo span.copyright {
   border-bottom: 0;
 }
 
+@media only screen and (min-width: 34em) {
+  #blog article img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #blog article h2.postTitle {
+    font-size: 1.5rem;
+  }
+  #blog article p {
+    font-size: 1.25rem;
+  }
+  #blog article .postReadMore a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  #blog article .postReadMore a {
+    opacity: .8;
+  }
+  #blog article .postReadMore a:hover {
+    opacity: 1;
+    box-shadow: 0px 2px 0px #373640;
+    -webkit-transition: all 180ms ease-in-out;
+       -moz-transition: all 180ms ease-in-out;
+            transition: all 180ms ease-in-out;
+  }
+}
+
 #us {
   color: #373640;
 }
@@ -1560,6 +1730,12 @@ footer .siteInfo span.copyright {
 #us p {
   line-height: 1.75;
   font-size: 1.05rem;
+}
+
+@media only screen and (min-width: 48em) {
+  #us {
+    font-size: 1.25rem;
+  }
 }
 
 #music .discography {
@@ -1655,6 +1831,15 @@ footer .siteInfo span.copyright {
           transition: all 180ms ease-in-out;
 }
 
+@media only screen and (min-width: 48em) {
+  #music .discography h2 {
+    font-size: 1.5rem;
+  }
+  #music .discography p {
+    font-size: 1.25rem;
+  }
+}
+
 #shows {
   color: #373640;
 }
@@ -1733,4 +1918,39 @@ footer .siteInfo span.copyright {
 
 #contact .contactHeader {
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 48em) {
+  #contact .formRow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact .formName,
+  #contact .formEmail {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #contact .formEmail {
+    margin-left: 1rem;
+  }
 }
